@@ -30,7 +30,8 @@ src/task/
 │   ├── __init__.py   # Creates main app, registers all command sub-apps
 │   ├── add.py        # add command
 │   ├── list.py       # list command
-│   └── done.py       # done command (mark task as completed)
+│   ├── done.py       # done command (mark task as completed)
+│   └── edit.py       # edit command (change title/priority)
 ├── models.py         # Task dataclass, Priority enum (low/medium/high)
 ├── storage.py        # JSON persistence (load_tasks, save_tasks, add_task, get_tasks, delete_task)
 ├── display.py        # Output formatting (success/error/warning/info/table)
@@ -40,7 +41,8 @@ tests/
 ├── conftest.py       # Fixtures: runner, temp_storage, sample_data
 ├── test_add.py       # Tests for add command
 ├── test_list.py      # Tests for list command
-└── test_done.py      # Tests for done command
+├── test_done.py      # Tests for done command
+└── test_edit.py      # Tests for edit command
 ```
 
 **Flow**: `main.py` → `commands/__init__.py` → command file → storage/display
