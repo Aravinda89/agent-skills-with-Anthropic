@@ -24,6 +24,11 @@ Or
 source .venv/bin/activate
 task
 ```
+in Windows powershell
+``` bash
+.\.venv\Scripts\Activate.ps1
+task
+```
 This is ideal for development since you don't need to reinstall after code changes.
 
 ### 2. Global Installation
